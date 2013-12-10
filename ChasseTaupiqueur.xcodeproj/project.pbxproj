@@ -205,6 +205,22 @@
 		0D0AE0A0184DC52000AB49E3 /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D0AE09F184DC52000AB49E3 /* MenuScene.cpp */; };
 		0D0AE0A8184DC62800AB49E3 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D0AE0A6184DC62800AB49E3 /* GameOverScene.cpp */; };
 		0D0AE0AB184DC99200AB49E3 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D0AE0A9184DC99200AB49E3 /* SceneManager.cpp */; };
+		DB0B0AEB1857051800385A62 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0ADE1857051800385A62 /* background.png */; };
+		DB0B0AEC1857051800385A62 /* clefairy.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0ADF1857051800385A62 /* clefairy.png */; };
+		DB0B0AED1857051800385A62 /* Diglett.ico in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0AE01857051800385A62 /* Diglett.ico */; };
+		DB0B0AEE1857051800385A62 /* diglett.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0AE11857051800385A62 /* diglett.png */; };
+		DB0B0AEF1857051800385A62 /* dugtrio.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0AE21857051800385A62 /* dugtrio.png */; };
+		DB0B0AF01857051800385A62 /* hole.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0AE31857051800385A62 /* hole.png */; };
+		DB0B0AF11857051800385A62 /* life.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0AE41857051800385A62 /* life.png */; };
+		DB0B0AF21857051800385A62 /* parasect.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0AE51857051800385A62 /* parasect.png */; };
+		DB0B0AF31857051800385A62 /* Start.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0AE61857051800385A62 /* Start.png */; };
+		DB0B0AF41857051800385A62 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0AE71857051800385A62 /* title.png */; };
+		DB0B0AF51857051800385A62 /* title1.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0AE81857051800385A62 /* title1.png */; };
+		DB0B0AF61857051800385A62 /* title2.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0AE91857051800385A62 /* title2.png */; };
+		DB0B0AF71857051800385A62 /* title3.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0AEA1857051800385A62 /* title3.png */; };
+		DB0B0AFA1857053E00385A62 /* Hole.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB0B0AF81857053E00385A62 /* Hole.cpp */; };
+		DB0B0AFD1857058400385A62 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB0B0AFB1857058400385A62 /* GameScene.cpp */; };
+		DB0B0AFF1857124A00385A62 /* score_life_time_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0AFE1857124A00385A62 /* score_life_time_ui.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -642,6 +658,24 @@
 		0D0AE0A7184DC62800AB49E3 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 		0D0AE0A9184DC99200AB49E3 /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
 		0D0AE0AA184DC99200AB49E3 /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
+		DB0B0ADE1857051800385A62 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Resources/background.png; sourceTree = "<group>"; };
+		DB0B0ADF1857051800385A62 /* clefairy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clefairy.png; path = Resources/clefairy.png; sourceTree = "<group>"; };
+		DB0B0AE01857051800385A62 /* Diglett.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = Diglett.ico; path = Resources/Diglett.ico; sourceTree = "<group>"; };
+		DB0B0AE11857051800385A62 /* diglett.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = diglett.png; path = Resources/diglett.png; sourceTree = "<group>"; };
+		DB0B0AE21857051800385A62 /* dugtrio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dugtrio.png; path = Resources/dugtrio.png; sourceTree = "<group>"; };
+		DB0B0AE31857051800385A62 /* hole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hole.png; path = Resources/hole.png; sourceTree = "<group>"; };
+		DB0B0AE41857051800385A62 /* life.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = life.png; path = Resources/life.png; sourceTree = "<group>"; };
+		DB0B0AE51857051800385A62 /* parasect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = parasect.png; path = Resources/parasect.png; sourceTree = "<group>"; };
+		DB0B0AE61857051800385A62 /* Start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Start.png; path = Resources/Start.png; sourceTree = "<group>"; };
+		DB0B0AE71857051800385A62 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = title.png; path = Resources/title.png; sourceTree = "<group>"; };
+		DB0B0AE81857051800385A62 /* title1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = title1.png; path = Resources/title1.png; sourceTree = "<group>"; };
+		DB0B0AE91857051800385A62 /* title2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = title2.png; path = Resources/title2.png; sourceTree = "<group>"; };
+		DB0B0AEA1857051800385A62 /* title3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = title3.png; path = Resources/title3.png; sourceTree = "<group>"; };
+		DB0B0AF81857053E00385A62 /* Hole.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hole.cpp; sourceTree = "<group>"; };
+		DB0B0AF91857053E00385A62 /* Hole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hole.h; sourceTree = "<group>"; };
+		DB0B0AFB1857058400385A62 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
+		DB0B0AFC1857058400385A62 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		DB0B0AFE1857124A00385A62 /* score_life_time_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = score_life_time_ui.png; path = Resources/score_life_time_ui.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -711,6 +745,20 @@
 		0D0ADE0F184DC51C00AB49E3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DB0B0ADE1857051800385A62 /* background.png */,
+				DB0B0ADF1857051800385A62 /* clefairy.png */,
+				DB0B0AE01857051800385A62 /* Diglett.ico */,
+				DB0B0AE11857051800385A62 /* diglett.png */,
+				DB0B0AE21857051800385A62 /* dugtrio.png */,
+				DB0B0AE31857051800385A62 /* hole.png */,
+				DB0B0AE41857051800385A62 /* life.png */,
+				DB0B0AE51857051800385A62 /* parasect.png */,
+				DB0B0AE61857051800385A62 /* Start.png */,
+				DB0B0AFE1857124A00385A62 /* score_life_time_ui.png */,
+				DB0B0AE71857051800385A62 /* title.png */,
+				DB0B0AE81857051800385A62 /* title1.png */,
+				DB0B0AE91857051800385A62 /* title2.png */,
+				DB0B0AEA1857051800385A62 /* title3.png */,
 				021FC4C618502E9D00F96DC3 /* Vivaldi.ttf */,
 				0D0ADE10184DC51C00AB49E3 /* CloseNormal.png */,
 				0D0ADE12184DC51C00AB49E3 /* CloseSelected.png */,
@@ -1530,8 +1578,12 @@
 				0D0AE09E184DC52000AB49E3 /* MenuScene.h */,
 				0D0AE0A6184DC62800AB49E3 /* GameOverScene.cpp */,
 				0D0AE0A7184DC62800AB49E3 /* GameOverScene.h */,
+				DB0B0AFB1857058400385A62 /* GameScene.cpp */,
+				DB0B0AFC1857058400385A62 /* GameScene.h */,
 				0D0AE0A9184DC99200AB49E3 /* SceneManager.cpp */,
 				0D0AE0AA184DC99200AB49E3 /* SceneManager.h */,
+				DB0B0AF81857053E00385A62 /* Hole.cpp */,
+				DB0B0AF91857053E00385A62 /* Hole.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1599,6 +1651,20 @@
 				0D0ADE25184DC51C00AB49E3 /* iTunesArtwork in Resources */,
 				0D0ADEB7184DC51D00AB49E3 /* ChangeLog in Resources */,
 				021FC4C718502E9D00F96DC3 /* Vivaldi.ttf in Resources */,
+				DB0B0AEB1857051800385A62 /* background.png in Resources */,
+				DB0B0AEC1857051800385A62 /* clefairy.png in Resources */,
+				DB0B0AED1857051800385A62 /* Diglett.ico in Resources */,
+				DB0B0AEE1857051800385A62 /* diglett.png in Resources */,
+				DB0B0AEF1857051800385A62 /* dugtrio.png in Resources */,
+				DB0B0AF01857051800385A62 /* hole.png in Resources */,
+				DB0B0AF11857051800385A62 /* life.png in Resources */,
+				DB0B0AF21857051800385A62 /* parasect.png in Resources */,
+				DB0B0AF31857051800385A62 /* Start.png in Resources */,
+				DB0B0AF41857051800385A62 /* title.png in Resources */,
+				DB0B0AF51857051800385A62 /* title1.png in Resources */,
+				DB0B0AF61857051800385A62 /* title2.png in Resources */,
+				DB0B0AF71857051800385A62 /* title3.png in Resources */,
+				DB0B0AFF1857124A00385A62 /* score_life_time_ui.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1785,6 +1851,8 @@
 				0D0AE0A0184DC52000AB49E3 /* MenuScene.cpp in Sources */,
 				0D0AE0A8184DC62800AB49E3 /* GameOverScene.cpp in Sources */,
 				0D0AE0AB184DC99200AB49E3 /* SceneManager.cpp in Sources */,
+				DB0B0AFA1857053E00385A62 /* Hole.cpp in Sources */,
+				DB0B0AFD1857058400385A62 /* GameScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

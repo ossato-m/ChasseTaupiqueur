@@ -1,5 +1,6 @@
 #include "MenuScene.h"
 #include "GameOverScene.h"
+#include "GameScene.h"
 #include "SceneManager.h"
 #include "SimpleAudioEngine.h"
 
@@ -50,7 +51,7 @@ bool MenuScene::init()
 void MenuScene::startCallback(cocos2d::CCObject* pSender) {
     CCScene* scene = SceneManager::getOrCreateScene();
     scene->removeChild(this, true);
-    scene->addChild(GameOverScene::create());
+    scene->addChild(GameScene::create());
 }
 
 void MenuScene::quitCallback(cocos2d::CCObject *pSender) {

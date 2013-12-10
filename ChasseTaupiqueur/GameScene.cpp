@@ -82,6 +82,7 @@ void GameScene::ccTouchesEnded(CCSet* pTouches, CCEvent* event) {
                 if (!(*it)->isAvailable() && (*it)->isTouched(touch)) {
                     this->removeChild((*it)->getSprite(), false);
                     (*it)->removeMole();
+                    this->addChild((*it)->getSprite());
                 }
             }
         }
@@ -95,8 +96,6 @@ void GameScene::resetMole(void) {
         this->removeChild(hole->getSprite(), false);        
         hole->addMole("diglett.png");
         this->addChild(hole->getSprite());
-    } else {
-        printf("No available hole bouuuuh\n");
     }
 }
 

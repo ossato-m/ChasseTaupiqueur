@@ -55,7 +55,8 @@ bool Hole::isTouched(cocos2d::CCTouch* t) const {
     cocos2d::CCSize s = _sprite->getContentSize();
     cocos2d::CCPoint tl = t->getLocation();
     
-    if (tl.x >= p.x && tl.x <= (p.x + s.width) && tl.y >= p.y && tl.y <= (p.y + s.height)) {
+    if (tl.x >= (p.x - s.width / 2) && tl.x <= (p.x + s.width / 2) &&
+        tl.y >= (p.y - s.height / 2) && tl.y <= (p.y + s.height / 2)) {
         return true;
     }
     return false;

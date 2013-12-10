@@ -41,6 +41,11 @@ private:
     std::vector<Hole*>   _holes;
     float                _moleInterval;
 	float                _moleTimer;
+    cocos2d::CCSprite*   _background;
+    cocos2d::CCSprite*   _life1;
+    cocos2d::CCSprite*   _life2;
+    cocos2d::CCSprite*   _life3;
+    cocos2d::CCSprite*   _ui;
 };
 
 #endif /* defined(__ChasseTaupiqueur__GameScene__) */

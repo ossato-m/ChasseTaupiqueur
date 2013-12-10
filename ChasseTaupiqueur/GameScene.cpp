@@ -29,6 +29,9 @@ bool GameScene::init()
     _moleInterval = 2.5f;
 	_moleTimer = _moleInterval * 0.99f;
     
+    _difficultyInterval = 10.0f;
+    _difficultyTimer = _difficultyInterval * 0.99f;
+    
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     
     _background = CCSprite::create("background.png");
@@ -49,19 +52,25 @@ bool GameScene::init()
     this->addChild(_ui, 0);
     
     _life1 = CCSprite::create("life.png");
-    _life1->setPosition(ccp(size.width - 55 - 27.5, size.height - 27.5));
+    _life1->setPosition(ccp(size.width - 162.5, size.height - 45));
     _life1->retain();
     this->addChild(_life1, 0);
     
     _life2 = CCSprite::create("life.png");
-    _life2->setPosition(ccp(size.width - 55, size.height - 27.5));
+    _life2->setPosition(ccp(size.width - 100, size.height - 45));
     _life2->retain();
     this->addChild(_life2, 0);
     
     _life3 = CCSprite::create("life.png");
-    _life3->setPosition(ccp(size.width - 27.5, size.height - 27.5));
+    _life3->setPosition(ccp(size.width - 37.5, size.height - 45));
     _life3->retain();
     this->addChild(_life3, 0);
+    
+    _score = 0;
+    _scoreLabel = CCLabelTTF::create("0", "Arial", 20);
+    _scoreLabel->setPosition(ccp(220, size.height - 52));
+    _scoreLabel->retain();
+    this->addChild(_scoreLabel);
     
     //listen for touches
     this->setTouchEnabled(true);
@@ -83,6 +92,8 @@ void GameScene::ccTouchesEnded(CCSet* pTouches, CCEvent* event) {
                     this->removeChild((*it)->getSprite(), false);
                     (*it)->removeMole();
                     this->addChild((*it)->getSprite());
+                    _score += 10;
+                    //_scoreLabel->set
                 }
             }
         }
@@ -117,12 +128,16 @@ Hole* GameScene::findAvailableHole() {
     return findAvailableHole();
 }
 
+void GameScene::increaseDifficulty() {
+    _moleInterval = _moleInterval * 0.9f;
+}
+
 void GameScene::update(float dt) {
-    /*_difficultyTimer += dt;
-     if (_difficultyTimer > _difficultyInterval) {
-     _difficultyTimer = 0;
-     this->increaseDifficulty();
-     }*/
+    _difficultyTimer += dt;
+    if (_difficultyTimer > _difficultyInterval && _difficultyTimer != 0) {
+        _difficultyTimer = 0;
+        this->increaseDifficulty();
+    }
     
     _moleTimer += dt;
     if (_moleTimer > _moleInterval && _moleTimer != 0) {
@@ -137,4 +152,5 @@ GameScene::~GameScene() {
     CC_SAFE_RELEASE(_life2);
     CC_SAFE_RELEASE(_life3);
     CC_SAFE_RELEASE(_ui);
+    CC_SAFE_RELEASE(_scoreLabel);
 }

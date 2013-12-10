@@ -35,12 +35,17 @@ public:
     Hole* findAvailableHole();
     bool  hasAvailableHole();
     void  resetMole();
+    void  increaseDifficulty();
     
     
 private:
+    int                  _score;
+    cocos2d::CCLabelTTF* _scoreLabel;
     std::vector<Hole*>   _holes;
     float                _moleInterval;
 	float                _moleTimer;
+    float                _difficultyTimer;
+    float                _difficultyInterval;
     cocos2d::CCSprite*   _background;
     cocos2d::CCSprite*   _life1;
     cocos2d::CCSprite*   _life2;

@@ -39,12 +39,12 @@ bool GameOverScene::init()
     _background->retain();
     this->addChild(_background, 0);
     
-    _gameOverText = CCLabelTTF::create("Game Over !", "Vivaldi", 80);
+    _gameOverText = CCLabelTTF::create("Game Over !", "Pokemon Hollow Normal", 80);
     _gameOverText->setPosition(ccp(winSize.width / 2, winSize.height * 3 / 4));
     _gameOverText->retain();
     this->addChild(_gameOverText);
     
-    _quitGame= CCMenuItemFont::create("Quit", this, menu_selector(GameOverScene::quitCallback));
+    _quitGame = CCMenuItemFont::create("Quit", this, menu_selector(GameOverScene::quitCallback));
     _quitGame->setPosition(ccp(0, - _gameOverText->getContentSize().height / 2));
     _quitGame->retain();
     

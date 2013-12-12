@@ -141,6 +141,7 @@ void GameScene::resetMole(void) {
             hole->addMole("parasect.png", PARASECT);
         } else {
             hole->addMole("diglett.png", DIGLETT);
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Diglett.mp3");
         }
         this->addChild(hole->getSprite());
     }
@@ -198,10 +199,12 @@ void GameScene::update(float dt) {
     std::vector<Hole*>::iterator it;
     for (it = _holes.begin(); it != _holes.end(); it++) {
         if (!(*it)->isAvailable() && (*it)->checkTime(_moleStayInterval, dt)) {
+            if ((*it)->getMoleType() == DIGLETT || (*it)->getMoleType() == DUGTRIO) {
+                removeLife();
+            }
             this->removeChild((*it)->getSprite(), false);
             (*it)->removeMole();
-            this->addChild((*it)->getSprite());
-            removeLife();
+            this->addChild((*it)->getSprite());            
         }
     }
 }

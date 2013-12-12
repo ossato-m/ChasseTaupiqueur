@@ -28,7 +28,9 @@ bool MenuScene::init()
     {
         return false;
     }
-    
+    if (!CocosDenshion::SimpleAudioEngine::sharedEngine()->isBackgroundMusicPlaying()) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("Background-music.wav", true);
+    }
     CCSize winSize = this->getContentSize();
     
     _background = CCSprite::create("background.png");

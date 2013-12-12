@@ -17,7 +17,7 @@ public:
     // a selector callback
     void startCallback(CCObject* pSender);
     void quitCallback(CCObject* pSender);
-
+    
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(MenuScene);
     ~MenuScene();

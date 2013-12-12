@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		021FC4C718502E9D00F96DC3 /* Vivaldi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 021FC4C618502E9D00F96DC3 /* Vivaldi.ttf */; };
 		0D0ADDFF184DC51C00AB49E3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0ADDFE184DC51C00AB49E3 /* QuartzCore.framework */; };
 		0D0ADE01184DC51C00AB49E3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0ADE00184DC51C00AB49E3 /* OpenGLES.framework */; };
 		0D0ADE03184DC51C00AB49E3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0ADE02184DC51C00AB49E3 /* OpenAL.framework */; };
@@ -221,10 +220,11 @@
 		DB0B0AFA1857053E00385A62 /* Hole.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB0B0AF81857053E00385A62 /* Hole.cpp */; };
 		DB0B0AFD1857058400385A62 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB0B0AFB1857058400385A62 /* GameScene.cpp */; };
 		DB0B0AFF1857124A00385A62 /* score_life_time_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0B0AFE1857124A00385A62 /* score_life_time_ui.png */; };
+		DB96BE811859683600000158 /* Background-music.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB96BE7F1859683500000158 /* Background-music.wav */; };
+		DB96BE821859683600000158 /* Diglett.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DB96BE801859683600000158 /* Diglett.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		021FC4C618502E9D00F96DC3 /* Vivaldi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vivaldi.ttf; sourceTree = "<group>"; };
 		0D0ADDFB184DC51C00AB49E3 /* ChasseTaupiqueur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChasseTaupiqueur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D0ADDFE184DC51C00AB49E3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0D0ADE00184DC51C00AB49E3 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -676,6 +676,8 @@
 		DB0B0AFB1857058400385A62 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
 		DB0B0AFC1857058400385A62 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		DB0B0AFE1857124A00385A62 /* score_life_time_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = score_life_time_ui.png; path = Resources/score_life_time_ui.png; sourceTree = "<group>"; };
+		DB96BE7F1859683500000158 /* Background-music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Background-music.wav"; sourceTree = "<group>"; };
+		DB96BE801859683600000158 /* Diglett.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Diglett.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -733,6 +735,8 @@
 		0D0ADE0E184DC51C00AB49E3 /* ChasseTaupiqueur */ = {
 			isa = PBXGroup;
 			children = (
+				DB96BE7F1859683500000158 /* Background-music.wav */,
+				DB96BE801859683600000158 /* Diglett.mp3 */,
 				0D0ADE0F184DC51C00AB49E3 /* Resources */,
 				0D0ADE27184DC51C00AB49E3 /* ios */,
 				0D0ADE30184DC51C00AB49E3 /* libs */,
@@ -759,7 +763,6 @@
 				DB0B0AE81857051800385A62 /* title1.png */,
 				DB0B0AE91857051800385A62 /* title2.png */,
 				DB0B0AEA1857051800385A62 /* title3.png */,
-				021FC4C618502E9D00F96DC3 /* Vivaldi.ttf */,
 				0D0ADE10184DC51C00AB49E3 /* CloseNormal.png */,
 				0D0ADE12184DC51C00AB49E3 /* CloseSelected.png */,
 				0D0ADE14184DC51C00AB49E3 /* Default.png */,
@@ -1650,7 +1653,6 @@
 				0D0ADE23184DC51C00AB49E3 /* Icon@2x.png in Resources */,
 				0D0ADE25184DC51C00AB49E3 /* iTunesArtwork in Resources */,
 				0D0ADEB7184DC51D00AB49E3 /* ChangeLog in Resources */,
-				021FC4C718502E9D00F96DC3 /* Vivaldi.ttf in Resources */,
 				DB0B0AEB1857051800385A62 /* background.png in Resources */,
 				DB0B0AEC1857051800385A62 /* clefairy.png in Resources */,
 				DB0B0AED1857051800385A62 /* Diglett.ico in Resources */,
@@ -1665,6 +1667,8 @@
 				DB0B0AF61857051800385A62 /* title2.png in Resources */,
 				DB0B0AF71857051800385A62 /* title3.png in Resources */,
 				DB0B0AFF1857124A00385A62 /* score_life_time_ui.png in Resources */,
+				DB96BE811859683600000158 /* Background-music.wav in Resources */,
+				DB96BE821859683600000158 /* Diglett.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

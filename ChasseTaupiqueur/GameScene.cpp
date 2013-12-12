@@ -7,6 +7,7 @@
 //
 
 #include <vector>
+#include "GameOverScene.h"
 #include "GameScene.h"
 #include "SceneManager.h"
 #include "MenuScene.h"
@@ -72,6 +73,13 @@ bool GameScene::init()
     _scoreLabel->retain();
     this->addChild(_scoreLabel);
     
+    _moleStayInterval = 5.0f;
+    
+    _parasectTimer = 0.f;
+    
+    _parasectAction = CCRepeat::create(CCSequence::createWithTwoActions(CCMoveBy::create(1.0, ccp(50, 50)), CCMoveBy::create(1.0, ccp(-50, -50))), 2);
+    _parasectAction->retain();
+    
     //listen for touches
     this->setTouchEnabled(true);
     
@@ -89,11 +97,29 @@ void GameScene::ccTouchesEnded(CCSet* pTouches, CCEvent* event) {
             std::vector<Hole*>::iterator it;
             for (it = _holes.begin(); it != _holes.end(); it++) {
                 if (!(*it)->isAvailable() && (*it)->isTouched(touch)) {
+                    
+                    switch ((*it)->getMoleType()) {
+                        case DUGTRIO:
+                            _score += 30;
+                            break;
+                        case DIGLETT:
+                            _score += 10;
+                            break;
+                        case CLEFAIRY:
+                            removeLife();
+                            break;
+                        case PARASECT:
+                            this->runAction(_parasectAction);
+                            _parasectTimer = 2.0;
+                            break;
+                    }
                     this->removeChild((*it)->getSprite(), false);
                     (*it)->removeMole();
                     this->addChild((*it)->getSprite());
-                    _score += 10;
-                    //_scoreLabel->set
+                    
+                    char score_buffer[10];
+                    sprintf(score_buffer,"%i", _score);
+                    _scoreLabel->setString(score_buffer);
                 }
             }
         }
@@ -104,8 +130,18 @@ void GameScene::resetMole(void) {
     if (hasAvailableHole()) {
         Hole* hole = findAvailableHole();
         
-        this->removeChild(hole->getSprite(), false);        
-        hole->addMole("diglett.png");
+        this->removeChild(hole->getSprite(), false);
+        
+        int randVal = random() % 100;
+        if (randVal >= 0 && randVal <= 10) {
+            hole->addMole("clefairy.png", CLEFAIRY);
+        } else if (randVal >= 11 && randVal <= 20) {
+            hole->addMole("dugtrio.png", DUGTRIO);
+        } else if (randVal >= 21 && randVal <= 30) {
+            hole->addMole("parasect.png", PARASECT);
+        } else {
+            hole->addMole("diglett.png", DIGLETT);
+        }
         this->addChild(hole->getSprite());
     }
 }
@@ -130,6 +166,20 @@ Hole* GameScene::findAvailableHole() {
 
 void GameScene::increaseDifficulty() {
     _moleInterval = _moleInterval * 0.9f;
+    _moleStayInterval = _moleStayInterval * 0.9f;
+}
+
+void GameScene::removeLife() {
+    if (_life3->isVisible()) {
+        _life3->setVisible(false);
+    } else if (_life2->isVisible()) {
+        _life2->setVisible(false);
+    } else if (_life1->isVisible()) {
+        _life1->setVisible(false);
+        CCScene* scene = SceneManager::getOrCreateScene();
+        scene->removeChild(this, true);
+        scene->addChild(GameOverScene::create());
+    }
 }
 
 void GameScene::update(float dt) {
@@ -143,6 +193,16 @@ void GameScene::update(float dt) {
     if (_moleTimer > _moleInterval && _moleTimer != 0) {
         _moleTimer = 0;
         this->resetMole();
+    }
+    
+    std::vector<Hole*>::iterator it;
+    for (it = _holes.begin(); it != _holes.end(); it++) {
+        if (!(*it)->isAvailable() && (*it)->checkTime(_moleStayInterval, dt)) {
+            this->removeChild((*it)->getSprite(), false);
+            (*it)->removeMole();
+            this->addChild((*it)->getSprite());
+            removeLife();
+        }
     }
 }
 

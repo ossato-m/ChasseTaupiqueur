@@ -29,7 +29,8 @@ public:
     
     void quitCallback(CCObject* pSender);
     void restartCallback(CCObject* pSender);
-    
+
+    cocos2d::CCSprite* _background;
     CCLabelTTF*     _gameOverText;
     CCMenuItemFont* _restartGame;
     CCMenuItemFont* _quitGame;

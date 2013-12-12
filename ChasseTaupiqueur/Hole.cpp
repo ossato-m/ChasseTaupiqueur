@@ -17,21 +17,30 @@ Hole::Hole(int holeNo) {
     _sprite = cocos2d::CCSprite::create("hole.png");
     _sprite->retain();
     _sprite->setPosition(_location);
-    
-    std::cout << "new sprite" << std::endl;
-    
+    _type = NONE;
     _available = true;
+    _moleStayTimer = 0;
 }
 
 Hole::~Hole() {
 }
 
-void Hole::addMole(std::string const& sprite) {
+bool Hole::checkTime(float moleStayInterval, float dt) {
+    if (_moleStayTimer > moleStayInterval) {
+        return true;
+    }
+    _moleStayTimer += dt;
+    return false;
+}
+
+void Hole::addMole(std::string const& sprite, PokemonType type) {
     _sprite->release();    
     _sprite = cocos2d::CCSprite::create(sprite.c_str());
     _sprite->retain();
     _sprite->setPosition(_location);
     _available = false;
+    _type = type;
+    _moleStayTimer = 0;
 }
 
 cocos2d::CCSprite* Hole::getSprite() const {
@@ -44,10 +53,16 @@ void Hole::removeMole() {
     _sprite->retain();
     _sprite->setPosition(_location);
     _available = true;
+    _type = NONE;
+    _moleStayTimer = 0;
 }
 
 bool Hole::isAvailable() const {
     return (_available);
+}
+
+PokemonType Hole::getMoleType() const {
+    return (_type);
 }
 
 bool Hole::isTouched(cocos2d::CCTouch* t) const {

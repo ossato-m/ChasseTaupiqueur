@@ -22,9 +22,10 @@ public:
     CREATE_FUNC(MenuScene);
     ~MenuScene();
     
-    CCLabelTTF* _gameTitle;
+    cocos2d::CCSprite* _gameTitle;
     CCMenuItemFont* _startGame;
     CCMenuItemFont* _endGame;
+    cocos2d::CCSprite*   _background;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

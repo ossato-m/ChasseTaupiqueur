@@ -36,6 +36,7 @@ public:
     bool  hasAvailableHole();
     void  resetMole();
     void  increaseDifficulty();
+    void  removeLife();
     
     
 private:
@@ -51,6 +52,9 @@ private:
     cocos2d::CCSprite*   _life2;
     cocos2d::CCSprite*   _life3;
     cocos2d::CCSprite*   _ui;
+    float                _moleStayInterval;
+    float                _parasectTimer;
+    cocos2d::CCAction*   _parasectAction;
 };
 
 #endif /* defined(__ChasseTaupiqueur__GameScene__) */

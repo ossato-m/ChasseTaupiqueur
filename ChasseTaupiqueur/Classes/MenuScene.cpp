@@ -11,6 +11,7 @@ MenuScene::~MenuScene() {
     CC_SAFE_DELETE(_gameTitle);
     CC_SAFE_DELETE(_endGame);
     CC_SAFE_DELETE(_startGame);
+    CC_SAFE_DELETE(_background);
 }
 
 CCScene* MenuScene::scene() {
@@ -30,8 +31,14 @@ bool MenuScene::init()
     
     CCSize winSize = this->getContentSize();
     
-    _gameTitle = CCLabelTTF::create("Chasse Taupiqueur !!!", "Arial", 80);
+    _background = CCSprite::create("background.png");
+    _background->setPosition(ccp(winSize.width / 2, winSize.height / 2));
+    _background->retain();
+    this->addChild(_background, 0);
+    
+    _gameTitle = CCSprite::create("title.png");
     _gameTitle->setPosition(ccp(winSize.width / 2, winSize.height * 3 / 4));
+    _gameTitle->setScale(1.5);
     _gameTitle->retain();
     this->addChild(_gameTitle);
     

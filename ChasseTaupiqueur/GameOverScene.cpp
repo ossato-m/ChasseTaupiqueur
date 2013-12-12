@@ -34,6 +34,11 @@ bool GameOverScene::init()
     
     CCSize winSize = this->getContentSize();
     
+    _background = CCSprite::create("background.png");
+    _background->setPosition(ccp(winSize.width / 2, winSize.height / 2));
+    _background->retain();
+    this->addChild(_background, 0);
+    
     _gameOverText = CCLabelTTF::create("Game Over !", "Vivaldi", 80);
     _gameOverText->setPosition(ccp(winSize.width / 2, winSize.height * 3 / 4));
     _gameOverText->retain();

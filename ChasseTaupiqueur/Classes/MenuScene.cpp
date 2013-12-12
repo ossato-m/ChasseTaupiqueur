@@ -26,10 +26,12 @@ bool MenuScene::init()
     {
         return false;
     }
-    
+    if (!CocosDenshion::SimpleAudioEngine::sharedEngine()->isBackgroundMusicPlaying()) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("Background-music.wav", true);
+    }
     CCSize winSize = this->getContentSize();
     
-    _gameTitle = CCLabelTTF::create("Chasse Taupiqueur !!!", "Arial", 80);
+    _gameTitle = CCLabelTTF::create("Chasse Taupiqueur !!!", "pokemonpixelfont", 80);
     _gameTitle->setPosition(ccp(winSize.width / 2, winSize.height * 3 / 4));
     _gameTitle->retain();
     this->addChild(_gameTitle);

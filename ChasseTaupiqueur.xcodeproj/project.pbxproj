@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		021FC4C718502E9D00F96DC3 /* Vivaldi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 021FC4C618502E9D00F96DC3 /* Vivaldi.ttf */; };
+		02ACF7891856FD0800CBA3CF /* diglett.png in Resources */ = {isa = PBXBuildFile; fileRef = 02ACF7871856FD0800CBA3CF /* diglett.png */; };
+		02ACF78A1856FD0800CBA3CF /* dugtrio.png in Resources */ = {isa = PBXBuildFile; fileRef = 02ACF7881856FD0800CBA3CF /* dugtrio.png */; };
+		02ACF78D1856FD1700CBA3CF /* life.png in Resources */ = {isa = PBXBuildFile; fileRef = 02ACF78B1856FD1700CBA3CF /* life.png */; };
+		02ACF78E1856FD1700CBA3CF /* parasect.png in Resources */ = {isa = PBXBuildFile; fileRef = 02ACF78C1856FD1700CBA3CF /* parasect.png */; };
+		02F1425D185961F6009BE366 /* Background-music.wav in Resources */ = {isa = PBXBuildFile; fileRef = 02F1425B185961F6009BE366 /* Background-music.wav */; };
+		02F14260185965CF009BE366 /* Diglett.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02F1425F185965CF009BE366 /* Diglett.mp3 */; };
 		0D0ADDFF184DC51C00AB49E3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0ADDFE184DC51C00AB49E3 /* QuartzCore.framework */; };
 		0D0ADE01184DC51C00AB49E3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0ADE00184DC51C00AB49E3 /* OpenGLES.framework */; };
 		0D0ADE03184DC51C00AB49E3 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0ADE02184DC51C00AB49E3 /* OpenAL.framework */; };
@@ -208,7 +213,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		021FC4C618502E9D00F96DC3 /* Vivaldi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vivaldi.ttf; sourceTree = "<group>"; };
+		02ACF7871856FD0800CBA3CF /* diglett.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = diglett.png; path = Resources/diglett.png; sourceTree = "<group>"; };
+		02ACF7881856FD0800CBA3CF /* dugtrio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dugtrio.png; path = Resources/dugtrio.png; sourceTree = "<group>"; };
+		02ACF78B1856FD1700CBA3CF /* life.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = life.png; path = Resources/life.png; sourceTree = "<group>"; };
+		02ACF78C1856FD1700CBA3CF /* parasect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = parasect.png; path = Resources/parasect.png; sourceTree = "<group>"; };
+		02F1425B185961F6009BE366 /* Background-music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Background-music.wav"; sourceTree = "<group>"; };
+		02F1425F185965CF009BE366 /* Diglett.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Diglett.mp3; sourceTree = "<group>"; };
 		0D0ADDFB184DC51C00AB49E3 /* ChasseTaupiqueur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChasseTaupiqueur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D0ADDFE184DC51C00AB49E3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0D0ADE00184DC51C00AB49E3 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -711,7 +721,12 @@
 		0D0ADE0F184DC51C00AB49E3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				021FC4C618502E9D00F96DC3 /* Vivaldi.ttf */,
+				02F1425B185961F6009BE366 /* Background-music.wav */,
+				02F1425F185965CF009BE366 /* Diglett.mp3 */,
+				02ACF78B1856FD1700CBA3CF /* life.png */,
+				02ACF78C1856FD1700CBA3CF /* parasect.png */,
+				02ACF7871856FD0800CBA3CF /* diglett.png */,
+				02ACF7881856FD0800CBA3CF /* dugtrio.png */,
 				0D0ADE10184DC51C00AB49E3 /* CloseNormal.png */,
 				0D0ADE12184DC51C00AB49E3 /* CloseSelected.png */,
 				0D0ADE14184DC51C00AB49E3 /* Default.png */,
@@ -1598,7 +1613,12 @@
 				0D0ADE23184DC51C00AB49E3 /* Icon@2x.png in Resources */,
 				0D0ADE25184DC51C00AB49E3 /* iTunesArtwork in Resources */,
 				0D0ADEB7184DC51D00AB49E3 /* ChangeLog in Resources */,
-				021FC4C718502E9D00F96DC3 /* Vivaldi.ttf in Resources */,
+				02ACF7891856FD0800CBA3CF /* diglett.png in Resources */,
+				02ACF78A1856FD0800CBA3CF /* dugtrio.png in Resources */,
+				02ACF78D1856FD1700CBA3CF /* life.png in Resources */,
+				02ACF78E1856FD1700CBA3CF /* parasect.png in Resources */,
+				02F1425D185961F6009BE366 /* Background-music.wav in Resources */,
+				02F14260185965CF009BE366 /* Diglett.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

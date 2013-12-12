@@ -34,12 +34,14 @@ bool GameOverScene::init()
     
     CCSize winSize = this->getContentSize();
     
-    _gameOverText = CCLabelTTF::create("Game Over !", "Vivaldi", 80);
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Diglett.mp3");
+    
+    _gameOverText = CCLabelTTF::create("Game Over !", "Pokemon Hollow Normal", 80);
     _gameOverText->setPosition(ccp(winSize.width / 2, winSize.height * 3 / 4));
     _gameOverText->retain();
     this->addChild(_gameOverText);
     
-    _quitGame= CCMenuItemFont::create("Quit", this, menu_selector(GameOverScene::quitCallback));
+    _quitGame = CCMenuItemFont::create("Quit", this, menu_selector(GameOverScene::quitCallback));
     _quitGame->setPosition(ccp(0, - _gameOverText->getContentSize().height / 2));
     _quitGame->retain();
     

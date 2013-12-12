@@ -44,11 +44,12 @@ bool MenuScene::init()
     _gameTitle->retain();
     this->addChild(_gameTitle);
     
-    _endGame= CCMenuItemFont::create("Close", this, menu_selector(MenuScene::quitCallback));
-    _endGame->setPosition(ccp(0, - _gameTitle->getContentSize().height / 2));
+    _endGame = CCMenuItemImage::itemWithNormalImage("quit.png", "quit.png", this, menu_selector(MenuScene::quitCallback));
+    _endGame->setPosition(ccp(0, - _gameTitle->getContentSize().height / 2 - 100));
     _endGame->retain();
     
-    CCMenuItem *_startGame = CCMenuItemFont::create("Test", this, menu_selector(MenuScene::startCallback));
+    CCMenuItem *_startGame = CCMenuItemImage::itemWithNormalImage("play.png", "play.png", this, menu_selector(MenuScene::startCallback));
+    _startGame->setPosition(ccp(0, - _gameTitle->getContentSize().height / 2));
     _startGame->retain();
     
     CCMenu* pMenu = CCMenu::create(_startGame, _endGame, NULL);

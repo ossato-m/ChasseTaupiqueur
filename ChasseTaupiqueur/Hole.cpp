@@ -9,7 +9,7 @@
 #include "Hole.h"
 
 cocos2d::CCPoint holePositions[9] = {
-    ccp(267, 180), ccp(494, 180), ccp(721, 180), ccp(267, 280), ccp(494, 280), ccp(721, 280), ccp(267, 380), ccp(494, 380), ccp(721, 380)
+    ccp(267, 140), ccp(494, 140), ccp(721, 140), ccp(267, 320), ccp(494, 320), ccp(721, 320), ccp(267, 480), ccp(494, 480), ccp(721, 480)
 };
 
 Hole::Hole(int holeNo) {

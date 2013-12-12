@@ -30,7 +30,7 @@ bool GameScene::init()
     _moleInterval = 2.5f;
 	_moleTimer = _moleInterval * 0.99f;
     
-    _difficultyInterval = 10.0f;
+    _difficultyInterval = 5.0f;
     _difficultyTimer = _difficultyInterval * 0.99f;
     
     CCSize size = CCDirector::sharedDirector()->getWinSize();
@@ -77,7 +77,7 @@ bool GameScene::init()
     
     _parasectTimer = 0.f;
     
-    _parasectAction = CCRepeat::create(CCSequence::createWithTwoActions(CCMoveBy::create(1.0, ccp(50, 50)), CCMoveBy::create(1.0, ccp(-50, -50))), 2);
+    _parasectAction = CCRepeat::create(CCSequence::createWithTwoActions(CCMoveBy::create(0.1, ccp(5, 5)), CCMoveBy::create(0.1, ccp(-5, -5))), 10);
     _parasectAction->retain();
     
     //listen for touches
@@ -90,6 +90,7 @@ bool GameScene::init()
 }
 
 void GameScene::ccTouchesEnded(CCSet* pTouches, CCEvent* event) {
+    if (_parasectTimer <= 0.f) {
     for (CCSetIterator i = pTouches->begin(); i != pTouches->end(); i++) {
         CCTouch* touch = (CCTouch*) (*i);
         
@@ -97,6 +98,8 @@ void GameScene::ccTouchesEnded(CCSet* pTouches, CCEvent* event) {
             std::vector<Hole*>::iterator it;
             for (it = _holes.begin(); it != _holes.end(); it++) {
                 if (!(*it)->isAvailable() && (*it)->isTouched(touch)) {
+                    
+                    this->removeChild((*it)->getSprite(), false);
                     
                     switch ((*it)->getMoleType()) {
                         case DUGTRIO:
@@ -109,11 +112,14 @@ void GameScene::ccTouchesEnded(CCSet* pTouches, CCEvent* event) {
                             removeLife();
                             break;
                         case PARASECT:
-                            this->runAction(_parasectAction);
+                            std::vector<Hole*>::iterator it;
+                            for (it = _holes.begin(); it != _holes.end(); it++) {
+                                (*it)->getSprite()->runAction((CCAction*) _parasectAction->copy());
+                            }                            
                             _parasectTimer = 2.0;
                             break;
                     }
-                    this->removeChild((*it)->getSprite(), false);
+                    
                     (*it)->removeMole();
                     this->addChild((*it)->getSprite());
                     
@@ -123,6 +129,7 @@ void GameScene::ccTouchesEnded(CCSet* pTouches, CCEvent* event) {
                 }
             }
         }
+    }
     }
 }
 
@@ -206,6 +213,13 @@ void GameScene::update(float dt) {
             (*it)->removeMole();
             this->addChild((*it)->getSprite());            
         }
+    }
+    
+    if (_parasectTimer > 0.f) {
+        _parasectTimer -= dt;
+    }
+    if (_parasectTimer < 0.f) {
+        _parasectTimer = 0.f;
     }
 }
 

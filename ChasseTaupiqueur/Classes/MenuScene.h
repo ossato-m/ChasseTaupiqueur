@@ -23,8 +23,8 @@ public:
     ~MenuScene();
     
     cocos2d::CCSprite* _gameTitle;
-    CCMenuItemFont* _startGame;
-    CCMenuItemFont* _endGame;
+    CCMenuItemImage* _startGame;
+    CCMenuItemImage* _endGame;
     cocos2d::CCSprite*   _background;
 };
 

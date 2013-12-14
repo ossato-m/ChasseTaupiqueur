@@ -247,4 +247,13 @@ GameScene::~GameScene() {
     CC_SAFE_RELEASE(_life3);
     CC_SAFE_RELEASE(_ui);
     CC_SAFE_RELEASE(_scoreLabel);
+    CC_SAFE_RELEASE(_timeLabel);
+    CC_SAFE_RELEASE(_parasectAction);
+    
+    for (int i = 0; i < _holes.size() - 1; i++) {
+        CC_SAFE_RELEASE(_holes[i]->getSprite());
+    }
+    for (int i = 0; i < _holes.size(); i++) {
+        delete _holes[i];
+    }
 }

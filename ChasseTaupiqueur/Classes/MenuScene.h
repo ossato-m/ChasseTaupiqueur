@@ -26,6 +26,7 @@ public:
     CCMenuItemImage* _startGame;
     CCMenuItemImage* _endGame;
     cocos2d::CCSprite*   _background;
+    cocos2d::CCMenu*    _pMenu;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

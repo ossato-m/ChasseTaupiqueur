@@ -23,6 +23,11 @@ CCScene* GameOverScene::scene()
     return scene;
 }
 
+GameOverScene::~GameOverScene() {
+    CC_SAFE_RELEASE(_background);
+    CC_SAFE_RELEASE(_gameOverText);
+}
+
 // on "init" you need to initialize your instance
 bool GameOverScene::init()
 {

@@ -12,6 +12,7 @@ MenuScene::~MenuScene() {
     CC_SAFE_DELETE(_endGame);
     CC_SAFE_DELETE(_startGame);
     CC_SAFE_DELETE(_background);
+    CC_SAFE_DELETE(_pMenu);
 }
 
 CCScene* MenuScene::scene() {
@@ -55,9 +56,9 @@ bool MenuScene::init()
     _startGame->setPosition(ccp(0, - _gameTitle->getContentSize().height / 2));
     _startGame->retain();
     
-    CCMenu* pMenu = CCMenu::create(_startGame, _endGame, NULL);
-    pMenu->retain();
-    this->addChild(pMenu);
+    _pMenu = CCMenu::create(_startGame, _endGame, NULL);
+    _pMenu->retain();
+    this->addChild(_pMenu);
     return true;
 }
 

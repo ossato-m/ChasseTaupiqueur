@@ -29,6 +29,8 @@ public:
     
     void quitCallback(CCObject* pSender);
     void restartCallback(CCObject* pSender);
+    
+    ~GameOverScene();
 
     cocos2d::CCSprite* _background;
     CCLabelTTF*     _gameOverText;

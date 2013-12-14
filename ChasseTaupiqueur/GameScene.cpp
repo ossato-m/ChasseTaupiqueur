@@ -69,9 +69,15 @@ bool GameScene::init()
     
     _score = 0;
     _scoreLabel = CCLabelTTF::create("0", "Arial", 20);
-    _scoreLabel->setPosition(ccp(220, size.height - 52));
+    _scoreLabel->setPosition(ccp(240, size.height - 52));
     _scoreLabel->retain();
     this->addChild(_scoreLabel);
+    
+    _time = 0;
+    _timeLabel = CCLabelTTF::create("00:00", "Arial", 20);
+    _timeLabel->setPosition(ccp(580, size.height - 52));
+    _timeLabel->retain();
+    this->addChild(_timeLabel);
     
     _moleStayInterval = 5.0f;
     
@@ -224,6 +230,14 @@ void GameScene::update(float dt) {
     if (_parasectTimer < 0.f) {
         _parasectTimer = 0.f;
     }
+    
+    _time += dt;
+    
+    char time_buffer[10];
+    int time_int = (int) _time;
+    
+    sprintf(time_buffer,"%.2d:%.2d", time_int / 60, time_int % 60);
+    _timeLabel->setString(time_buffer);
 }
 
 GameScene::~GameScene() {

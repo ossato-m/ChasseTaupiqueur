@@ -45,16 +45,23 @@ bool GameOverScene::init()
     _background->retain();
     this->addChild(_background, 0);
     
-    _gameOverText = CCLabelTTF::create("Game Over !", "Pokemon Hollow Normal", 80);
-    _gameOverText->setPosition(ccp(winSize.width / 2, winSize.height * 3 / 4));
-    _gameOverText->retain();
-    this->addChild(_gameOverText);
+    _gameOver = CCSprite::create("GameOver.png");
+    _gameOver->setPosition(ccp(winSize.width / 2, winSize.height * 3 / 4));
+    _gameOver->setScale(1.5);
+    _gameOver->retain();
+    this->addChild(_gameOver);
     
-    _quitGame = CCMenuItemFont::create("Quit", this, menu_selector(GameOverScene::quitCallback));
-    _quitGame->setPosition(ccp(0, - _gameOverText->getContentSize().height / 2));
+    _scoreLabel = CCLabelTTF::create("0", "Arial", 20);
+    _scoreLabel->setPosition(ccp(220, winSize.height - 52));
+    _scoreLabel->retain();
+    this->addChild(_scoreLabel);
+    
+    _quitGame = CCMenuItemImage::itemWithNormalImage("quit.png", "quit.png", this, menu_selector(MenuScene::quitCallback));
+    _quitGame->setPosition(ccp(0, - _gameOver->getContentSize().height / 2 - 100));
     _quitGame->retain();
     
-    _restartGame = CCMenuItemFont::create("Retry", this, menu_selector(GameOverScene::restartCallback));
+    CCMenuItem *_restartGame = CCMenuItemImage::itemWithNormalImage("play.png", "play.png", this, menu_selector(MenuScene::startCallback));
+    _restartGame->setPosition(ccp(0, - _gameOver->getContentSize().height / 2));
     _restartGame->retain();
     
     CCMenu* pMenu = CCMenu::create(_restartGame, _quitGame, NULL);

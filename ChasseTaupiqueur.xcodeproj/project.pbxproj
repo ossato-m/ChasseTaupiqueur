@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02CC53D3185C35DB007AC1EE /* score_time_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CC53D2185C35DB007AC1EE /* score_time_ui.png */; };
 		02D09C5E185C1C7F0040A92E /* Clefairy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02D09C5A185C1C7F0040A92E /* Clefairy.mp3 */; };
 		02D09C5F185C1C7F0040A92E /* Hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02D09C5B185C1C7F0040A92E /* Hit.mp3 */; };
 		02D09C60185C1C7F0040A92E /* Parasect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 02D09C5C185C1C7F0040A92E /* Parasect.mp3 */; };
@@ -233,6 +234,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02CC53D2185C35DB007AC1EE /* score_time_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = score_time_ui.png; path = Resources/score_time_ui.png; sourceTree = "<group>"; };
 		02D09C5A185C1C7F0040A92E /* Clefairy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Clefairy.mp3; sourceTree = "<group>"; };
 		02D09C5B185C1C7F0040A92E /* Hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hit.mp3; sourceTree = "<group>"; };
 		02D09C5C185C1C7F0040A92E /* Parasect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Parasect.mp3; sourceTree = "<group>"; };
@@ -763,6 +765,7 @@
 		0D0ADE0F184DC51C00AB49E3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				02CC53D2185C35DB007AC1EE /* score_time_ui.png */,
 				02D09C68185C21F50040A92E /* triotriotrio.mp3 */,
 				DB96BE7F1859683500000158 /* Background-music.wav */,
 				DB96BE801859683600000158 /* Diglett.mp3 */,
@@ -1701,6 +1704,7 @@
 				02D09C66185C1E0A0040A92E /* play.png in Resources */,
 				02D09C67185C1E0A0040A92E /* quit.png in Resources */,
 				02D09C69185C21F50040A92E /* triotriotrio.mp3 in Resources */,
+				02CC53D3185C35DB007AC1EE /* score_time_ui.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

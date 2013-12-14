@@ -49,7 +49,7 @@ bool GameOverScene::init()
     this->addChild(_background, 0);
     
     _gameOver = CCSprite::create("GameOver.png");
-    _gameOver->setPosition(ccp(winSize.width / 2, winSize.height * 3 / 4));
+    _gameOver->setPosition(ccp(winSize.width / 2, winSize.height * 4 / 6));
     _gameOver->setScale(1.5);
     _gameOver->retain();
     this->addChild(_gameOver);
@@ -71,7 +71,7 @@ bool GameOverScene::init()
     _timeLabel->retain();
     this->addChild(_timeLabel);
     
-    _ui = CCSprite::create("score_life_time_ui.png");
+    _ui = CCSprite::create("score_time_ui.png");
     _ui->setPosition(ccp(winSize.width / 2, winSize.height - 50));
     _ui->retain();
     this->addChild(_ui, 0);

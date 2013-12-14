@@ -18,6 +18,7 @@ using namespace CocosDenshion;
 
 extern CCScene* globalScene;
 extern int _score;
+extern float _time;
 
 // on "init" you need to initialize your instance
 bool GameScene::init()

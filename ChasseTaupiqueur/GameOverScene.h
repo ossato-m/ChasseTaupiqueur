@@ -32,10 +32,12 @@ public:
 
     
     CCLabelTTF* _scoreLabel;
+    cocos2d::CCLabelTTF* _timeLabel;
     CCSprite* _background;
     CCSprite*  _gameOver;
     CCMenuItemImage* _restartGame;
     CCMenuItemImage* _quitGame;
+    cocos2d::CCSprite*  _ui;
     
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(GameOverScene);

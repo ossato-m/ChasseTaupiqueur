@@ -27,6 +27,7 @@ bool GameScene::init()
         return false;
     }
     
+    srand(getpid());
     _moleInterval = 2.5f;
 	_moleTimer = _moleInterval * 0.99f;
     

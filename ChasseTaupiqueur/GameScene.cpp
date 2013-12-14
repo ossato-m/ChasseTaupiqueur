@@ -100,7 +100,7 @@ void GameScene::ccTouchesEnded(CCSet* pTouches, CCEvent* event) {
                 if (!(*it)->isAvailable() && (*it)->isTouched(touch)) {
                     
                     this->removeChild((*it)->getSprite(), false);
-                    
+                    CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Hit.mp3");
                     switch ((*it)->getMoleType()) {
                         case DUGTRIO:
                             _score += 30;
@@ -142,10 +142,13 @@ void GameScene::resetMole(void) {
         int randVal = random() % 100;
         if (randVal >= 0 && randVal <= 10) {
             hole->addMole("clefairy.png", CLEFAIRY);
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Clefairy.mp3");
         } else if (randVal >= 11 && randVal <= 20) {
             hole->addMole("dugtrio.png", DUGTRIO);
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("triotriotrio.mp3");
         } else if (randVal >= 21 && randVal <= 30) {
             hole->addMole("parasect.png", PARASECT);
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Parasect.mp3");
         } else {
             hole->addMole("diglett.png", DIGLETT);
             CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Diglett.mp3");

@@ -32,6 +32,12 @@ bool GameOverScene::init()
         return false;
     }
     
+    if (CocosDenshion::SimpleAudioEngine::sharedEngine()->isBackgroundMusicPlaying()) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic(true);
+    }
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("Game Over.mp3", true);
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(1);
+
     CCSize winSize = this->getContentSize();
     
     _background = CCSprite::create("background.png");

@@ -28,9 +28,12 @@ bool MenuScene::init()
     {
         return false;
     }
-    if (!CocosDenshion::SimpleAudioEngine::sharedEngine()->isBackgroundMusicPlaying()) {
-        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("Background-music.wav", true);
+    if (CocosDenshion::SimpleAudioEngine::sharedEngine()->isBackgroundMusicPlaying()) {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic(true);
     }
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("Background-music.wav", true);
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(0.5);
+
     CCSize winSize = this->getContentSize();
     
     _background = CCSprite::create("background.png");

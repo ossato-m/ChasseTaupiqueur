@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "Hole.h"
+#include "GameOverScene.h"
 #include "cocos2d.h"
 
 class GameScene : public cocos2d::CCLayer
@@ -40,8 +41,6 @@ public:
     
     
 private:
-    int                  _score;
-    float                _time;
     cocos2d::CCLabelTTF* _scoreLabel;
     cocos2d::CCLabelTTF* _timeLabel;
     std::vector<Hole*>   _holes;

@@ -29,7 +29,7 @@ public:
     
     void quitCallback(CCObject* pSender);
     void restartCallback(CCObject* pSender);
-    int _score;
+
     
     CCLabelTTF* _scoreLabel;
     CCSprite* _background;

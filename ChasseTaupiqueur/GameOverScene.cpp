@@ -15,6 +15,8 @@
 using namespace cocos2d;
 using namespace CocosDenshion;
 
+int _score;
+
 CCScene* GameOverScene::scene()
 {
     CCScene* scene = SceneManager::getOrCreateScene();
@@ -51,7 +53,10 @@ bool GameOverScene::init()
     _gameOver->retain();
     this->addChild(_gameOver);
     
-    _scoreLabel = CCLabelTTF::create("0", "Arial", 20);
+    _scoreLabel = CCLabelTTF::create("_score", "Arial", 20);
+    char score_buffer[10];
+    sprintf(score_buffer,"%i", _score);
+    _scoreLabel->setString(score_buffer);
     _scoreLabel->setPosition(ccp(220, winSize.height - 52));
     _scoreLabel->retain();
     this->addChild(_scoreLabel);
